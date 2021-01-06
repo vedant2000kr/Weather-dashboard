@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <img src="images/logo.png" alt="">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!-- <li>Home</li>
+            <li>Home</li>
+            <li>Home</li> -->
+        </ul>
+    </nav>
+    <div class="container">
+        <img src="images/weather2.jpg" alt="">
+        <div id="coordsDiv">
+            <div id="requestDiv">
+                <div id="buttons">
+                    <button class="selectType" id="forecast">Weather Forecast</button>
+                    <button class="selectType" id="current">Current Weather</button>
+                </div>
+                <div id="dropDowns">
+                    <input type="date" id="date">
+                    <br>
+                    <input type="text" id="cityName" placeholder="City Name">
+                    <select name="language" id="language"></select>
+                    <br>
+                    <select name="parameter" id="parameter"></select>
+                    <button class="submit" id="continue">Continue</button>
+                </div>
+            </div>
+            <div id="responseDiv">
+                <textarea name="response" id="response"></textarea>
+                <button class="submit" id="back">Back</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="cityname.js"></script>
+
+</html>

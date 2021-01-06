@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+
+    <!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' /> -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <img id="animatedLogo" src="images/logo.png" alt="">
+    <nav>
+        <img src="images/logo.png" alt="">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!-- <li>Home</li>
+            <li>Home</li>
+            <li>Home</li> -->
+        </ul>
+    </nav>
+    <div class="container">
+        <img src="images/weather2.jpg" alt="">
+        <div id="homeDiv">
+            <section>
+                <div id="homeCity">
+                    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+                    <div id='map' style='width: 1200px; height: 725px;'></div>
+                    <script>
+                        mapboxgl.accessToken = 'pk.eyJ1IjoidmVkYW50MTIzMzIxIiwiYSI6ImNraDd1bDBpYzBjNjMyc2xsNHhrNHYyOWEifQ.citrwTorRSHc1Mlqcxm5JA';
+                        var map = new mapboxgl.Map({
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/dark-v10',
+                            zoom:1
+                        });
+                    </script>
+                </div>
+            </section>
+            <aside>
+                <h1>You can see weather details here</h1>
+                <h1>Choose the format</h1>
+                <form action="/coords.html" method="GET"><button>Coordinates</button></form>
+                <form action="/cityname.html" method="GET"><button>City Name</button></form>
+                <form action="/postal.html" method="GET"><button>Postal Code</button></form>
+            </aside>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
